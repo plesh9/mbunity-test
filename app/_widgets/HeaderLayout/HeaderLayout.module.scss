@@ -1,5 +1,6 @@
-.animateIn {
-  animation: slide-in 1s ease-in-out forwards;
+body .animateIn {
+  animation: slide-in ease-in-out forwards;
+  animation-duration: 1s;
 
   @keyframes slide-in {
     0% {

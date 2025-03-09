@@ -22,14 +22,15 @@ const HeaderLayout: FC<PropsWithChildren> = ({ children }) => {
             <header
                 ref={headerRef}
                 className={cn(
-                    `
-                      absolute left-0 top-0 z-10 w-full pt-7 duration-500
-                      lg:pt-10
-                    `,
-                    isActive &&
-                        `
+                    'absolute left-0 top-0 z-10 w-full duration-500',
+                    isActive
+                        ? `
                           fixed bg-white py-4 shadow-sm
                           ${s.animateIn}
+                        `
+                        : `
+                          pt-7
+                          lg:pt-10
                         `
                 )}
             >
