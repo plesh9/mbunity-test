@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex flex-col min-h-[100dvh] bg-gray-50 text-black text-[12px] md:text-base;
+  }
+
+  input,
+  textarea {
+    @apply w-full pb-2 border-b border-black outline-none text-sm font-medium;
+
+    &::placeholder {
+      @apply text-gray-300;
+    }
+
+    &:placeholder-shown {
+      @apply border-gray-300;
+    }
+
+    &:focus {
+      @apply border-black;
+    }
+  }
+
+  textarea {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @apply h-40 resize-none;
+  }
+}
+
+* {
+  border-color: hsl(0deg 0% 14.9%);
+  outline-color: hsl(0deg 0% 83.1% / 50%);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+
+  &-thumb {
+    background-color: #000;
+    border-radius: 8px;
+  }
+
+  &-track {
+    background-color: transparent;
+  }
+}
+
+svg {
+  flex-shrink: 0;
+}
